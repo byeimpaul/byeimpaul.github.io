@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <meta name="description" content="A sample description for testing.">
+</head>
+<body>
+
+    <h1>Welcome to My Website</h1>
+
+    <script>
+        // Function to validate the presence of specific content on the page
+        function validatePageContent() {
+            // Check for title tag content
+            const title = document.title;
+            console.log("Page Title:", title);
+            if (title === 'Your Page Title') {
+                console.log("Title validation passed.");
+            } else {
+                console.warn("Title validation failed.");
+            }
+
+            // Check for meta description
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription && metaDescription.content === "A sample description for testing.") {
+                console.log("Meta description validation passed.");
+            } else {
+                console.warn("Meta description validation failed.");
+            }
+
+            // Check for specific header text in h1
+            const header = document.querySelector('h1');
+            if (header && header.textContent === "Welcome to My Website") {
+                console.log("Header validation passed.");
+            } else {
+                console.warn("Header validation failed.");
+            }
+        }
+
+        // Run the validation when the page loads
+        window.onload = validatePageContent;
+    </script>
+</body>
+</html>
