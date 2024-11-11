@@ -1,38 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Showcase</title>
+    <title>Digital Product Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to CoadBros Digital Products</h1>
-        <p>Choose your favorite flavor and checkout securely.</p>
-    </header>
 
-    <section class="product-showcase">
-        <div class="product">
-            <h2>Flavor 1</h2>
-            <p>Sweet and refreshing.</p>
-            <button onclick="checkout('flavor1')">Buy with Apple Pay</button>
-            <button onclick="checkoutPayPal('flavor1')">Buy with PayPal</button>
+<header>
+    <h1>Welcome to Our Digital Store</h1>
+</header>
+
+<main>
+    <section id="product-showcase">
+        <h2>Choose Your Product Flavor</h2>
+        
+        <!-- Product Flavor Selector -->
+        <div class="product-selector">
+            <select id="product-flavor" name="flavor">
+                <option value="original">Original</option>
+                <option value="spicy">Spicy</option>
+                <option value="sweet">Sweet</option>
+            </select>
         </div>
-        <div class="product">
-            <h2>Flavor 2</h2>
-            <p>Bold and intense.</p>
-            <button onclick="checkout('flavor2')">Buy with Apple Pay</button>
-            <button onclick="checkoutPayPal('flavor2')">Buy with PayPal</button>
+
+        <!-- Display Price or Product Information -->
+        <div id="product-info">
+            <p>Price: $9.99</p>
+            <p id="selected-flavor">Selected flavor: Original</p>
         </div>
-        <div class="product">
-            <h2>Flavor 3</h2>
-            <p>Light and zesty.</p>
-            <button onclick="checkout('flavor3')">Buy with Apple Pay</button>
-            <button onclick="checkoutPayPal('flavor3')">Buy with PayPal</button>
+
+        <!-- Payment Buttons -->
+        <div class="payment-buttons">
+            <button id="apple-pay-button">Buy with Apple Pay</button>
+            <button id="paypal-button">Pay with PayPal</button>
         </div>
     </section>
+</main>
 
-    <script src="script.js"></script>
+<footer>
+    <p>&copy; 2024 Digital Product Store</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>
