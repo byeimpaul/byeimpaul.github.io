@@ -3,44 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
-    <meta name="description" content="A sample description for testing.">
+    <title>Product Showcase</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Welcome to CoadBros Digital Products</h1>
+        <p>Choose your favorite flavor and checkout securely.</p>
+    </header>
 
-    <h1>Welcome to My Website</h1>
+    <section class="product-showcase">
+        <div class="product">
+            <h2>Flavor 1</h2>
+            <p>Sweet and refreshing.</p>
+            <button onclick="checkout('flavor1')">Buy with Apple Pay</button>
+            <button onclick="checkoutPayPal('flavor1')">Buy with PayPal</button>
+        </div>
+        <div class="product">
+            <h2>Flavor 2</h2>
+            <p>Bold and intense.</p>
+            <button onclick="checkout('flavor2')">Buy with Apple Pay</button>
+            <button onclick="checkoutPayPal('flavor2')">Buy with PayPal</button>
+        </div>
+        <div class="product">
+            <h2>Flavor 3</h2>
+            <p>Light and zesty.</p>
+            <button onclick="checkout('flavor3')">Buy with Apple Pay</button>
+            <button onclick="checkoutPayPal('flavor3')">Buy with PayPal</button>
+        </div>
+    </section>
 
-    <script>
-        // Function to validate the presence of specific content on the page
-        function validatePageContent() {
-            // Check for title tag content
-            const title = document.title;
-            console.log("Page Title:", title);
-            if (title === 'Your Page Title') {
-                console.log("Title validation passed.");
-            } else {
-                console.warn("Title validation failed.");
-            }
-
-            // Check for meta description
-            const metaDescription = document.querySelector('meta[name="description"]');
-            if (metaDescription && metaDescription.content === "A sample description for testing.") {
-                console.log("Meta description validation passed.");
-            } else {
-                console.warn("Meta description validation failed.");
-            }
-
-            // Check for specific header text in h1
-            const header = document.querySelector('h1');
-            if (header && header.textContent === "Welcome to My Website") {
-                console.log("Header validation passed.");
-            } else {
-                console.warn("Header validation failed.");
-            }
-        }
-
-        // Run the validation when the page loads
-        window.onload = validatePageContent;
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
