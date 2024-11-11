@@ -1,10 +1,24 @@
-function checkout(flavor) {
-    alert(`Initiating Apple Pay checkout for ${flavor}.`);
-    // Implement actual Apple Pay integration here.
-}
+document.addEventListener('DOMContentLoaded', function () {
+    // Update flavor information based on selection
+    const flavorSelect = document.getElementById('product-flavor');
+    const selectedFlavorDisplay = document.getElementById('selected-flavor');
 
-function checkoutPayPal(flavor) {
-    alert(`Redirecting to PayPal checkout for ${flavor}.`);
-    // Implement actual PayPal integration here.
-    window.location.href = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=YOUR_PAYPAL_EMAIL&item_name=${flavor}&amount=10.00&currency_code=USD`;
-}
+    flavorSelect.addEventListener('change', function () {
+        const selectedFlavor = flavorSelect.value;
+        selectedFlavorDisplay.textContent = `Selected flavor: ${selectedFlavor}`;
+    });
+
+    // Placeholder function for PayPal button
+    const paypalButton = document.getElementById('paypal-button');
+    paypalButton.addEventListener('click', function () {
+        // Redirect to PayPal checkout URL
+        window.location.href = 'YOUR_PAYPAL_CHECKOUT_LINK';
+    });
+
+    // Placeholder function for Apple Pay button
+    const applePayButton = document.getElementById('apple-pay-button');
+    applePayButton.addEventListener('click', function () {
+        // Logic for Apple Pay checkout
+        alert('Apple Pay is currently in development.');
+    });
+});
