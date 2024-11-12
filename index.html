@@ -1,129 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Cards</title>
-    <style>
-        /* Add your CSS styles here */
-    </style>
-</head>
-<body>
-    <main>
-        <!-- Start Product Cards Section -->
-        <section id="product-cards" class="product-cards-container">
-            <!-- Product Card 1: Photography Plan -->
-            <div class="product-card">
-                <div class="card-image">
-                    <!-- Dynamic Image -->
-                    <picture>
-                        <!-- Replace with dynamic image sources -->
-                        <source type="image/webp" srcset="{{IMAGE_URL_1_WEBP}}" media="(min-width: 600px)">
-                        <source type="image/jpeg" srcset="{{IMAGE_URL_1_JPEG}}" media="(min-width: 600px)">
-                        <img loading="lazy" alt="Photography Plan" src="{{IMAGE_URL_1}}" width="736" height="256">
-                    </picture>
-                </div>
-                <div class="card-content">
-                    <h3>{{PRODUCT_NAME_1}}</h3>
-                    <p>{{PRODUCT_DESCRIPTION_1}}</p>
-                    <p><em><a href="{{TRIAL_LINK_1}}">Start Free Trial</a></em> | <strong><a href="{{PURCHASE_LINK_1}}">Buy Now</a></strong></p>
-                </div>
-            </div>
+<header>
+  <nav>
+    <!-- Navigation links here -->
+  </nav>
+</header>
 
-            <!-- Product Card 2: Design App -->
-            <div class="product-card">
-                <div class="card-image">
-                    <!-- Dynamic Image -->
-                    <picture>
-                        <!-- Replace with dynamic image sources -->
-                        <source type="image/webp" srcset="{{IMAGE_URL_2_WEBP}}" media="(min-width: 600px)">
-                        <source type="image/jpeg" srcset="{{IMAGE_URL_2_JPEG}}" media="(min-width: 600px)">
-                        <img loading="lazy" alt="Design App" src="{{IMAGE_URL_2}}" width="736" height="256">
-                    </picture>
-                </div>
-                <div class="card-content">
-                    <h3>{{PRODUCT_NAME_2}}</h3>
-                    <p>{{PRODUCT_DESCRIPTION_2}}</p>
-                    <p><em><a href="{{TRIAL_LINK_2}}">Start Free Trial</a></em> | <strong><a href="{{PURCHASE_LINK_2}}">Buy Now</a></strong></p>
-                </div>
-            </div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Creative Cloud Pricing</h1>
+    <p>Get all apps for your creative needs</p>
+    <button class="cta-button">Start Free Trial</button>
+  </div>
+</section>
 
-            <!-- Product Card 3: Video Editing App -->
-            <div class="product-card">
-                <div class="card-image">
-                    <!-- Dynamic Image -->
-                    <picture>
-                        <!-- Replace with dynamic image sources -->
-                        <source type="image/webp" srcset="{{IMAGE_URL_3_WEBP}}" media="(min-width: 600px)">
-                        <source type="image/jpeg" srcset="{{IMAGE_URL_3_JPEG}}" media="(min-width: 600px)">
-                        <img loading="lazy" alt="Video Editing App" src="{{IMAGE_URL_3}}" width="736" height="256">
-                    </picture>
-                </div>
-                <div class="card-content">
-                    <h3>{{PRODUCT_NAME_3}}</h3>
-                    <p>{{PRODUCT_DESCRIPTION_3}}</p>
-                    <p><em><a href="{{TRIAL_LINK_3}}">Start Free Trial</a></em> | <strong><a href="{{PURCHASE_LINK_3}}">Buy Now</a></strong></p>
-                </div>
-            </div>
-        </section>
-        <!-- End Product Cards Section -->
+<section class="pricing">
+  <div class="pricing-card">
+    <h3>Individual Plan</h3>
+    <p>Details about the plan</p>
+    <p><strong>$XX/month</strong></p>
+    <button class="cta-button">Buy Now</button>
+  </div>
+  <div class="pricing-card popular">
+    <h3>Most Popular</h3>
+    <p>Details about the plan</p>
+    <p><strong>$YY/month</strong></p>
+    <button class="cta-button">Buy Now</button>
+  </div>
+  <!-- Additional plans can be added here -->
+</section>
 
-        <!-- Start Quiz Section (For dynamic selection) -->
-        <section id="quiz-section" class="quiz-container">
-            <div class="quiz-content">
-                <h2>Not sure which apps are best for you?</h2>
-                <p>Take a minute. We’ll help you figure it out.</p>
-                <p><strong><a href="{{QUIZ_URL}}">Get started</a></strong></p>
-            </div>
-        </section>
-        <!-- End Quiz Section -->
+<section class="comparison-table">
+  <table>
+    <tr>
+      <th>Plan</th>
+      <th>Features</th>
+    </tr>
+    <tr>
+      <td>Plan A</td>
+      <td>Feature 1, Feature 2</td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </table>
+</section>
 
-        <!-- Start Creative Cloud All Apps Section -->
-        <section id="all-apps" class="all-apps-container">
-            <div class="all-apps-content">
-                <h2>Make it all with All Apps</h2>
-                <p>Get the ultimate creative toolkit with a variety of apps for design, video, and more. It’s everything you need to make anything you want.</p>
-                <p><a href="{{ALL_APPS_URL}}">See what’s included</a></p>
-                <p><a href="{{PURCHASE_ALL_APPS_URL}}">Buy Now</a> | <strong><a href="{{TRIAL_ALL_APPS_URL}}">Free Trial</a></strong></p>
-            </div>
-            <div class="all-apps-image">
-                <!-- Dynamic Image -->
-                <picture>
-                    <!-- Replace with dynamic image sources -->
-                    <source type="image/webp" srcset="{{IMAGE_URL_4_WEBP}}" media="(min-width: 600px)">
-                    <source type="image/jpeg" srcset="{{IMAGE_URL_4_JPEG}}" media="(min-width: 600px)">
-                    <img loading="lazy" alt="Creative Cloud Apps" src="{{IMAGE_URL_4}}" width="1313" height="768">
-                </picture>
-            </div>
-        </section>
-        <!-- End Creative Cloud All Apps Section -->
-
-        <!-- Start Test Drive Apps Section -->
-        <section id="test-drive" class="test-drive-container">
-            <div class="test-drive-content">
-                <h2>Test drive the apps.</h2>
-                <p>Try a collection of creative apps or individual applications.</p>
-                <p><strong><a href="{{CATALOG_URL}}">Free Trial</a></strong> | <em><a href="{{PURCHASE_URL}}">Buy Now</a></em></p>
-            </div>
-        </section>
-        <!-- End Test Drive Apps Section -->
-
-        <!-- Start Section Metadata (For backend functionality) -->
-        <section id="metadata-section" class="section-metadata">
-            <div class="metadata">
-                <div>Background: {{SECTION_BACKGROUND_COLOR}}</div>
-                <div>Style: {{SECTION_STYLE}}</div>
-            </div>
-        </section>
-        <!-- End Section Metadata -->
-    </main>
-
-    <footer>
-        <!-- Footer Content -->
-    </footer>
-
-    <noscript>
-        <img src="https://example.com/pixel_tracking" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" />
-    </noscript>
-</body>
-</html>
+<section class="footer">
+  <p>Links to privacy, support, etc.</p>
+</section>
