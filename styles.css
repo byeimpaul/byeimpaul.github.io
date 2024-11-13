@@ -1,0 +1,87 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Link to Google Fonts for Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(200deg, #000000, rgba(0, 187, 212, 0.26)); /* A subtle aqua tint over black */
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+}
+
+.container {
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.product-card {
+    background-color: #000000; /* Ensure it blends with the page background */
+    border: 1px solid #444; /* Thin border with slight contrast */
+    padding: 20px;
+    width: 500px; /* Width of the card */
+    height: auto; /* Set height to auto for flexibility */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    overflow: visible; /* Prevents overflowing content */
+    position: relative;
+}
+
+.product-card img {
+    width: 100%; /* Ensure image uses full width of the container */
+    height: 68%; /* Image takes up 68% of the card's height */
+    object-fit: contain; /* Ensures the image fills the space without distortion */
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.product-card .content {
+    position: relative;
+    height: 32%; /* Ensures content fills the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes content to the bottom */
+    text-align: center;
+}
+
+.product-card h2 {
+    font-size: 20px;
+    color: #fff; /* White text for contrast */
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #bbb; /* Slightly lighter gray for text contrast */
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    background-color: rgba(0, 187, 212, 0);
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: rgba(0, 187, 212, 0.26);
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Keeps the rotation when hovering */
+}
